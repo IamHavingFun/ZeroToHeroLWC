@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Modal Component Demo">
+        <div class="slds-p-around_medium">
+            <lightning-button variant="brand" label="open" onclick={openHandler}></lightning-button>
+            <lightning-button variant="brand" label="open Second" onclick={openSecondHandler}></lightning-button>
+        </div>
+    </lightning-card>
+    <template if:true={isOpen}>
+        <c-modal onclose={closeHandler}>
+            <h1 slot="title">Modal header</h1>
+            <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.
+                Cillum sunt ad dolore quis aute consequat ipsum magna exercitation reprehenderit magna. </p>
+            <div slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={closeHandler}>Cancel</button>
+                <button class="slds-button slds-button_brand">Save</button>
+            </div>
+        </c-modal>
+    </template>
+
+    <template if:true={isOpenSecond}>
+        <c-modal onclose={secondCloseHandler}>
+            <h1 slot="title">Second Modal header</h1>
+            <p>Hello Everyone i am second modal </p>
+            <div slot="footer">
+                <button class="slds-button slds-button_neutral" onclick={secondCloseHandler}>Cancel</button>
+                <button class="slds-button slds-button_brand">Save</button>
+            </div>
+        </c-modal>
+    </template>
+   
+</template>

@@ -1,0 +1,17 @@
+<template>
+   <lightning-card title="Date Validation">
+       <div class="slds-p-around_medium">
+           <lightning-input type="date" name="startDate" label="Start Date" 
+           onchange={dateHandler}></lightning-input>
+           <lightning-input type="date" name="endDate" label="End Date" 
+           onchange={dateHandler}></lightning-input>
+           
+           <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+           </template>
+           
+           <lightning-button variant="brand" label="submit" onclick={submitHandler}
+           class="slds-m-top_medium"></lightning-button>
+       </div>
+   </lightning-card> 
+</template>

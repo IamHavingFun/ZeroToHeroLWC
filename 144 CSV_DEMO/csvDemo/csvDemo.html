@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="CSV Demo">
+        <div class="slds-p-around_medium">
+            <template if:true={accountData}>
+                <template for:each={accountData} for:item="account">
+                    <p key={account.Id}>{account.Name}</p>
+                </template>
+            </template>
+            <lightning-button label="Generate CSV" onclick={csvGenerator} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<apex:page controller="pdfPageController" renderAs="pdf" applyHtmlTag="false" showHeader="false" cache="true" readOnly="true">
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        </head>
+        <apex:outputText value="{!pdfText}" escape="false"/>
+    </html>
+
+</apex:page>

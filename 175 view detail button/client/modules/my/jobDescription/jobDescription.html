@@ -1,0 +1,33 @@
+<template>
+    <div class="container">
+        <div class="row descriptionCard marginTopMinus50">
+            <div class="col-12 col-sm-2">
+                <img src={selectedjob.company_logo} height="60px" width="100%" alt="company logo"/>
+            </div>
+            <div class="col-12 col-sm-7 text-center mt-2 mb-2">
+                <h3>{selectedjob.company}</h3>
+            </div>
+            <div class="col-12 col-sm-3 text-center">
+                <a href={selectedjob.company_url} target="_blank" class="btn btn-outline-dark" role="button">
+                    Company
+                </a>
+            </div>
+        </div>
+        <div class="row descriptionCard mt-3">
+            <div class="col-12 col-sm-8">
+                <p class="text-secondary">Posted On: {formattedDate}</p>
+            </div>
+            <div class="col-12 col-sm-4 text-right">
+                <a href="" target="_blank" role="button"
+                class="btn customButton btn-lg">Apply Now</a>
+            </div>
+            <div class="col-12 mb-3">
+                <h3>{selectedjob.title}</h3>
+                <p><span class="badge badge-danger">{selectedjob.type}</span></p>
+            </div>
+            <div class="col-12">
+                <div class="jobdescription" lwc:dom="manual"></div>
+            </div>
+        </div>
+    </div>
+</template>

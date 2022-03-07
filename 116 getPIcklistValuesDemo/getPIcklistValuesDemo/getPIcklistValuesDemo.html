@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="getPicklistValues Demo">
+        <div class="slds-var-p-around_medium">
+            <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectedIndustry}
+            placeholder="Select Industry"
+            options={industryOptions}
+            onchange={handleChange} ></lightning-combobox>
+        </div> 
+        <p>selectedIndustry:{selectedIndustry}</p>
+    </lightning-card>
+
+    <lightning-card title="getPicklistValues Demo with type">
+        <div class="slds-var-p-around_medium">
+            <lightning-combobox
+            name="Type"
+            label="Type"
+            value={selectedType}
+            placeholder="Select Type"
+            options={typeOptions}
+            onchange={handleTypeChange} ></lightning-combobox>
+        </div> 
+        <p>selectedType:{selectedType}</p>
+    </lightning-card>
+</template>

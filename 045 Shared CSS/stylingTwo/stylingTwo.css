@@ -1,0 +1,8 @@
+@import 'c/cssLibrary';
+.html{
+    width:90%;
+    background-color: #4caf50;
+}
+.abc{
+    color:red;
+}

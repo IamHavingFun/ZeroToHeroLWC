@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-is-relative container" style={maxWidth}>
+        <template for:each={slidesData} for:item="slide">
+            <div class={slide.cardClasses} key={slide.slideIndex}>
+                <div class="slideNumbers">{slide.slideIndex}/{slidesData.length} </div>
+                <img src={slide.image}/>
+                <div class="text-section slds-p-around_medium">
+                    <h3 class="slds-text-heading_large">{slide.heading}</h3>
+                    <div class="slds-text-heading_small">{slide.description}</div>
+                </div>
+            </div>
+        </template>
+        <a class="prev" onclick={backSlide}>&#10094;</a>
+        <a class="next" onclick={forwardSlide}>&#10095;</a>
+    </div>
+    <div class="slds-text-align_center slds-p-around_medium">
+        <template for:each={slidesData} for:item="slide">
+            <span class={slide.dotClases} data-id={slide.slideIndex} key={slide.slideIndex} onclick={currentSlide}></span>
+        </template>
+    </div>
+</template>

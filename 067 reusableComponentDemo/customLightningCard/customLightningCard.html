@@ -1,0 +1,28 @@
+<template>
+    <article class="slds-card">
+        <!--header-->
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <div class="slds-card__header-link slds-truncate">
+                            <slot name="title"></slot>
+                        </div>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <slot name="actions"></slot>
+                </div>
+            </header>
+        </div>
+        <!--body-->
+        <div class="slds-card__body">
+           <slot></slot>
+        </div>
+        <!--footer-->
+        <footer class="slds-card__footer slds-hide">
+            <slot name="footer" onslotchange={handleSlotFooterChange}></slot>
+        </footer>
+        
+        </article>
+</template>
